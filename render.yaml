@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: designdesk-ai
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PAYPAL_ENV
+        value: sandbox
