@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DesignDesk AI — AI Design Ordering Assistant</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">🎨 DesignDesk <span>AI</span></div>
+  <div id="modeBadges"></div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Order freelance design like ordering coffee.</h1>
+    <p>Describe what you need. Our AI drafts a concept in seconds, quotes a fixed USD price,
+       and you pay securely with PayPal. Final artwork is delivered the moment payment clears.</p>
+  </section>
+
+  <section class="card">
+    <h2>1 · Submit your brief</h2>
+    <form id="briefForm">
+      <label>Design type
+        <select id="type" required></select>
+      </label>
+      <label>Style preference
+        <select id="style">
+          <option value="modern">Modern</option>
+          <option value="minimal">Minimal</option>
+          <option value="playful">Playful</option>
+          <option value="vintage">Vintage</option>
+          <option value="luxury">Luxury</option>
+          <option value="3d-render">3D render</option>
+        </select>
+      </label>
+      <label>Describe your design
+        <textarea id="description" rows="4" required
+          placeholder="e.g. A detailed logo for a Chengdu coffee brand, a friendly cat mascot holding a cup, warm colors"></textarea>
+      </label>
+      <label>Your email
+        <input id="email" type="email" required placeholder="you@example.com">
+      </label>
+      <div id="quotePreview" class="quote hidden"></div>
+      <button type="submit" class="primary">Get instant quote &amp; AI draft →</button>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2>Track your order</h2>
+    <div class="track-row">
+      <input id="trackId" placeholder="Order number, e.g. DD-AB12CD">
+      <button id="trackBtn">Track</button>
+    </div>
+    <div id="myOrders"></div>
+  </section>
+
+  <section id="orderPanel" class="card hidden"></section>
+</main>
+
+<footer>DesignDesk AI — built for the PayPal AI Hackathon. Sandbox demo: no real money moves.</footer>
+<script src="app.js"></script>
+</body>
+</html>
